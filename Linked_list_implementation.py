@@ -25,6 +25,32 @@ class Linkedlist:
 				break
 			currentNode = currentNode.nextNode
 
+	def deleteHead(self):
+		previousHead = self.head
+		self.head = self.head.nextNode
+		previousHead = None
+			
+
+	def delete(self, position):
+		currentNode = self.head
+		currentPosition = 0
+		if position is 0:
+			self.deleteHead()
+			return
+		while True:
+			if currentPosition == position:
+				previousenode.nextNode = currentNode.nextNode
+				currentNode.nextNode = None
+				break
+			
+			previousenode = currentNode
+			currentNode = currentNode.nextNode
+			currentPosition +=1
+
+
+
+		
+
 	def printLinkedList(self):
 		currentNode = self.head
 		while currentNode is not None:
@@ -39,6 +65,8 @@ s1.printLinkedList()
 s1.insert("39")
 s1.printLinkedList()
 s1.insert("99")
+s1.printLinkedList()
+s1.delete(1)
 s1.printLinkedList()
 
 
