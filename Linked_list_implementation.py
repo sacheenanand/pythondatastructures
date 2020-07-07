@@ -6,7 +6,7 @@ class LinkedlistNode:
 	def __init__(self, value, nextNode=None):
 		self.value = value
 		self.nextNode = nextNode
-
+# when creating linked it contaims only header 
 class Linkedlist:
 	def __init__(self, head=None):
 		self.head = head
@@ -30,7 +30,7 @@ class Linkedlist:
 		self.head = self.head.nextNode
 		previousHead = None
 			
-
+# to delete a node we should know the position of a node to which node we should delete
 	def delete(self, position):
 		currentNode = self.head
 		currentPosition = 0
@@ -48,10 +48,7 @@ class Linkedlist:
 			currentPosition +=1
 
 
-
-		
-
-	def printLinkedList(self):
+    def printLinkedList(self):
 		currentNode = self.head
 		while currentNode is not None:
 			print currentNode.value, "->",
